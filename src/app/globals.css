@@ -2187,6 +2187,120 @@ body{background:#f9fcfd}.education-hero{min-height:660px}.education-hero:after{p
   box-shadow: 0 6px 18px rgba(11, 57, 51, 0.2) !important;
 }
 
+/* =========================================================
+   COMPREHENSIVE RESPONSIVE DESIGN FOR ALL DEVICES
+   (iPhone SE, 12, 14, 15, 16 Pro Max, Pixels, Galaxies, Foldables, iPads, Laptops)
+   ========================================================= */
+
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+/* Extra Small Phones & Foldables (<= 380px) */
+@media (max-width: 380px) {
+  .brand-text {
+    font-size: 0.95rem !important;
+  }
+  .brand-ss-logo {
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 0.8rem !important;
+  }
+  .hero-title-contrast {
+    font-size: 1.85rem !important;
+    line-height: 1.15 !important;
+  }
+  .page-hero-title {
+    font-size: 1.75rem !important;
+  }
+  .booking-panel {
+    padding: 22px 14px !important;
+  }
+  .social-card-item {
+    padding: 16px 14px !important;
+  }
+}
+
+/* Small & Medium Phones (<= 640px) */
+@media (max-width: 640px) {
+  .dynamic-university-hero {
+    min-height: 520px !important;
+    padding: 35px 14px !important;
+  }
+  .education-hero-content-contrast {
+    width: 100% !important;
+    padding: 45px 8px !important;
+  }
+  .hero-kicker-gold {
+    font-size: 0.75rem !important;
+    letter-spacing: 0.14em !important;
+    margin-bottom: 16px !important;
+  }
+  .hero-title-contrast {
+    font-size: clamp(2rem, 7.5vw, 2.7rem) !important;
+    margin-bottom: 18px !important;
+  }
+  .hero-subtext-contrast {
+    font-size: 0.95rem !important;
+    line-height: 1.6 !important;
+    margin-bottom: 28px !important;
+  }
+  .hero-actions-contrast {
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 12px !important;
+  }
+  .btn-hero-primary-dark,
+  .btn-hero-secondary-outline {
+    width: 100% !important;
+    text-align: center !important;
+    padding: 14px 20px !important;
+    justify-content: center !important;
+  }
+  .page-hero-custom {
+    padding: 65px 16px 55px !important;
+  }
+  .page-hero-title {
+    font-size: clamp(1.9rem, 6.5vw, 2.6rem) !important;
+  }
+  .booking-section-wrapper {
+    padding: 40px 14px 60px !important;
+  }
+  .social-connect-section {
+    padding: 55px 14px 70px !important;
+  }
+}
+
+/* Tablets & Small Laptops (641px - 1024px) */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .dynamic-university-hero {
+    min-height: 580px !important;
+  }
+  .education-hero-content-contrast {
+    width: min(720px, calc(100% - 32px)) !important;
+    padding: 65px 0 !important;
+  }
+  .hero-title-contrast {
+    font-size: clamp(2.6rem, 5vw, 3.6rem) !important;
+  }
+  .booking-layout {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+  .social-cards-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+/* Large Displays & Laptops (>= 1200px) */
+@media (min-width: 1200px) {
+  .container, .social-connect-container, .booking-layout {
+    max-width: 1240px !important;
+  }
+}
+
+
 
 
 
