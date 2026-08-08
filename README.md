@@ -1,72 +1,104 @@
-# Elevate Consulting Website
+# The Singh Sisters — Study Abroad & Global Education Consulting
 
-A complete, responsive dummy consulting-business website built with Next.js App Router, TypeScript, Tailwind CSS, Framer Motion-ready dependencies, Lucide icons, React Hook Form, and Zod. It includes realistic placeholder content and runs without external image services or a backend.
+A premium, modern web application built for **The Singh Sisters**, empowering students, researchers, and young women in STEM to pursue world-class higher education, Master's & PhD degrees, and fully funded global scholarships (Erasmus Mundus, DAAD, etc.).
 
-## Features
+Built with **Next.js 16 (App Router)**, **TypeScript**, **Vanilla CSS design system**, **Lucide Icons**, **React Hook Form**, **Zod**, and **Web3Forms API integration**.
 
-- Ten routes including custom 404, legal pages, contact, and consultation booking
-- Sticky responsive navigation, mobile menu, active states, footer, and scroll-to-top control
-- Premium responsive layouts for mobile, tablet, and desktop
-- Six service areas, eight industries, and six filterable case studies
-- Auto-playing accessible testimonial carousel and FAQ accordion
-- Contact and consultation forms with inline Zod validation, loading, success, and reset states
-- Page metadata, Open Graph/Twitter defaults, sitemap, robots file, favicon, and semantic structure
-- Reduced-motion support, focus states, labels, high contrast, and keyboard-friendly controls
+---
 
-## Technology
+## 🌟 Key Features & Highlights
 
-- Next.js (latest stable), React, TypeScript, App Router
-- Tailwind CSS
-- Lucide React, Framer Motion
-- React Hook Form, Zod, and Hookform Resolvers
+- **Dynamic University Hero**: Auto-fading background slideshow cycling top global universities (*Harvard, Oxford, Stanford, Cambridge, MIT, ETH Zurich, Imperial, NUS, Tokyo*) with zero text flickering.
+- **SS Monogram Branding & Custom Palette**: Deep forest green (`#0B3933`), warm gold (`#B58A4E`), off-white header navigation (`#FAF8F5`), and high-contrast typography.
+- **Free Consultation & Contact Hub**:
+  - Integrated 4-field consultation booking form (*Name, Email, Consultation Topic, Notes*).
+  - Web3Forms API email forwarding sending lead notifications directly to **`viveksingh0102vs@gmail.com`**.
+  - Direct 1-click fallback email trigger for instant user-to-owner contact.
+- **Social Media Connect Grid**: Interactive cards for Facebook, X (Twitter), and LinkedIn matching custom design specifications.
+- **Topic-Justifying Media**: Custom artwork for Global Destinations, Academic Pathways, Personalized Mentorship, and Scholarship Guidance.
+- **SEO & Performance Optimized**: Complete metadata, Open Graph / Twitter cards, robots.ts, sitemap.ts, and 100% static & server-rendered route compilation.
 
-## Create and run
+---
 
+## 🛠️ Technology Stack
+
+- **Framework**: Next.js 16 (App Router, Turbopack)
+- **Language**: TypeScript
+- **Styling**: Custom Vanilla CSS Tokens & Design System
+- **Icons**: Lucide React Icons
+- **Forms & Validation**: React Hook Form, Zod, Zod Resolvers
+- **Email Forwarding**: Web3Forms API integration
+- **Deployment Target**: Vercel & GitHub (`viveksingh0102vs-wq/the-singh-sisters`)
+
+---
+
+## 🚀 Quick Start & Development
+
+### 1. Clone & Install
 ```bash
-npx create-next-app@latest consulting-business-website --typescript --tailwind --eslint --app --src-dir --import-alias "@/*"
-cd consulting-business-website
-npm install lucide-react framer-motion react-hook-form zod @hookform/resolvers
-npm run dev
-```
-
-For this generated project, start directly with:
-
-```bash
+git clone https://github.com/viveksingh0102vs-wq/the-singh-sisters.git
 cd consulting-business-website
 npm install
+```
+
+### 2. Environment Configuration
+Create a `.env.local` file in the root directory:
+```env
+WEB3FORMS_ACCESS_KEY=a2bd156a-1413-4714-9627-0f73fed39acb
+```
+
+### 3. Run Development Server
+```bash
 npm run dev
 ```
+Open [http://localhost:3000](http://localhost:3000) to view the site.
 
-Open `http://localhost:3000`. Create a production build with `npm run build`, then run it with `npm start`.
-
-## Project structure
-
-```text
-public/images/                 Local placeholder artwork
-src/app/                       Pages, layout, metadata, sitemap, robots
-src/components/                Shared UI, navigation, forms and interactions
-src/data/site.ts               Services, industries, testimonials, case studies
+### 4. Build for Production
+```bash
+npm run build
 ```
 
-## Deploy to Vercel
+---
 
-Push the project to a Git repository, import it at Vercel, keep the detected Next.js framework settings, and deploy. Add a custom domain under **Project Settings → Domains**, update its DNS as Vercel instructs, then replace `elevateconsulting.example` in metadata, sitemap, and robots with the production domain.
+## 📂 Project Structure
 
-## Forms and integrations
+```text
+public/
+├── images/
+│   ├── universities/          Top world university photos (Harvard, Oxford, MIT...)
+│   ├── scholarship-guidance-hero.jpg
+│   ├── academic-pathways-hero.jpg
+│   └── personalized-mentorship-hero.jpg
+src/
+├── app/
+│   ├── about/                 Our Story & Mentors page
+│   ├── api/contact/           Contact API route handling Web3Forms mail forwarding
+│   ├── book-consultation/     Unified consultation booking route
+│   ├── contact/               Contact & Social Media Connect page
+│   ├── services/              Our Services overview
+│   ├── globals.css            Design tokens, responsive layouts, glassmorphism & gradients
+│   ├── layout.tsx             Root layout with custom header & footer
+│   └── page.tsx               Homepage featuring dynamic university hero & services grid
+├── components/
+│   ├── booking-form.tsx       Consultation form with Zod validation & mail submission
+│   ├── header.tsx             Off-white navbar with SS monogram logo
+│   ├── ui.tsx                 Reusable PageHero, SectionHeading & CTA components
+│   └── university-hero.tsx    Auto-fading top world university background hero
+└── data/
+    └── site.ts                Services, mentors, and program data
+```
 
-Both forms currently validate in the browser, simulate a short request, log data to the browser console, show confirmation, and reset. Connect Resend, Formspree, or EmailJS at the clearly marked submit point in `src/components/contact-form.tsx`. Connect a booking provider using `NEXT_PUBLIC_CALENDLY_URL`. Copy `.env.example` to `.env.local` and add only development values; never commit secrets.
+---
 
-## Replacing dummy content
+## 🚢 Deployment on Vercel
 
-- Edit shared service, industry, case-study, and testimonial content in `src/data/site.ts`.
-- Edit page-specific copy within each route under `src/app`.
-- Replace files in `public/images` and reference them with `next/image` using meaningful alt text.
-- Replace dummy email, phone, address, social URLs, legal text, and example canonical domain before launch.
-
-## Future improvements
-
-- Add Resend/API route delivery, spam protection, and consent-aware analytics
-- Connect Calendly or Cal.com for real availability and confirmation
-- Add a CMS for case studies, team members, and services
-- Add a database only if leads or appointments must be stored; PostgreSQL with Prisma is a suitable Vercel-compatible option
-- Commission legal review and run production accessibility/user testing
+1. Push your changes to GitHub:
+   ```bash
+   git add .
+   git commit -m "Update website features"
+   git push origin main
+   ```
+2. Import repository **`viveksingh0102vs-wq/the-singh-sisters`** on [Vercel](https://vercel.com/new).
+3. Set the Environment Variable:
+   - `WEB3FORMS_ACCESS_KEY` = `a2bd156a-1413-4714-9627-0f73fed39acb`
+4. Deploy! Your site will be live at `https://the-singh-sisters.vercel.app`.
