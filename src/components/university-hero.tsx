@@ -21,13 +21,6 @@ export const TOP_UNIVERSITIES: University[] = [
     image: "/images/universities/harvard.jpg",
   },
   {
-    id: "oxford",
-    name: "University of Oxford",
-    country: "United Kingdom",
-    city: "Oxford",
-    image: "/images/universities/oxford.jpg",
-  },
-  {
     id: "stanford",
     name: "Stanford University",
     country: "United States",
@@ -62,47 +55,40 @@ export const TOP_UNIVERSITIES: University[] = [
     city: "London",
     image: "/images/universities/imperial.jpg",
   },
-  {
-    id: "nus",
-    name: "National University of Singapore (NUS)",
-    country: "Singapore",
-    city: "Singapore",
-    image: "/images/universities/nus.jpg",
-  },
-  {
-    id: "tokyo",
-    name: "University of Tokyo",
-    country: "Japan",
-    city: "Tokyo",
-    image: "/images/universities/tokyo.jpg",
-  },
 ];
 
 export function UniversityHero() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [failedImages, setFailedImages] = useState<string[]>([]);
+  const availableUniversities = TOP_UNIVERSITIES.filter((uni) => !failedImages.includes(uni.id));
 
   // Preload all university background images on mount
   useEffect(() => {
     TOP_UNIVERSITIES.forEach((uni) => {
       const img = new Image();
       img.src = uni.image;
+      img.onerror = () => setFailedImages((current) => current.includes(uni.id) ? current : [...current, uni.id]);
     });
   }, []);
 
   // Automatic seamless background rotation every 1.5s
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % TOP_UNIVERSITIES.length);
+      setCurrentIndex((prev) => availableUniversities.length ? (prev + 1) % availableUniversities.length : 0);
     }, 1500);
 
     return () => clearInterval(timer);
-  }, []);
+  }, [availableUniversities.length]);
+
+  useEffect(() => {
+    if (currentIndex >= availableUniversities.length) setCurrentIndex(0);
+  }, [availableUniversities.length, currentIndex]);
 
   return (
     <section className="education-hero dynamic-university-hero" aria-label="Top World Universities Hero Showcase">
       {/* Background Slides Stack - Smooth opacity transition */}
       <div className="hero-slides-wrapper">
-        {TOP_UNIVERSITIES.map((uni, idx) => (
+        {availableUniversities.map((uni, idx) => (
           <div
             key={uni.id}
             className={`hero-slide-item ${idx === currentIndex ? "active" : ""}`}
@@ -119,16 +105,14 @@ export function UniversityHero() {
       {/* Main Hero Content - High Contrast & No Blinking */}
       <div className="education-hero-content-contrast">
         <Reveal>
-          <div className="hero-kicker-gold">STUDY ABROAD MENTORSHIP</div>
+          <p className="hero-principle">Talent is Universal. Opportunity Should Be Too.</p>
 
-          <h1 className="hero-title-contrast">
-            Talent is Universal.
-            <br />
-            Opportunity Should Be Too.
+          <h1 className="hero-best-fit-title">
+            Find the Best-Fit Master&apos;s, PhD &amp; Postdoctoral Opportunities Abroad for Life Sciences
           </h1>
 
           <p className="hero-subtext-contrast">
-            Whether you&apos;re a student from a small town, a young woman stepping into STEM, or an aspiring researcher looking beyond borders, we are here to support your journey. Your future starts with one conversation.
+            Whether you&apos;re a student from a small town stepping into life sciences or an aspiring researcher aiming beyond borders, we&apos;re here to guide your journey every step of the way. Your future begins with one conversation. Get a personalised Master&apos;s, PhD &amp; Postdoc shortlist tailored to your budget, profile and research goals — so every application counts.
           </p>
 
           <div className="hero-actions-contrast">
@@ -136,9 +120,10 @@ export function UniversityHero() {
               Book Your Free Consultation
             </Link>
             <Link href="/services" className="btn-hero-secondary-outline">
-              Explore Our Services
+              Explore Services
             </Link>
           </div>
+          <p className="hero-free-note">Your first call is on us — no charge for the initial consultation.</p>
         </Reveal>
       </div>
     </section>

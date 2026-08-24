@@ -16,10 +16,11 @@ const schema = z.object({
 type Data = z.infer<typeof schema>;
 
 const topicOptions = [
-  "Master’s & PhD Application Strategy",
+  "Master's Guidance",
+  "PhD Guidance",
+  "Postdoctoral Guidance",
   "Scholarship & Funding Guidance",
-  "Profile & CV Evaluation",
-  "STEM & Research Pathway Mentorship",
+  "Life Sciences & Research Pathway Mentorship",
   "General Study Abroad Consultation",
 ];
 
@@ -59,7 +60,7 @@ export function BookingForm() {
         body: JSON.stringify({
           access_key: WEB3FORMS_KEY,
           subject: `New Study Abroad Consultation Inquiry from ${data.name}`,
-          from_name: `${data.name} (The Singh Sisters Website)`,
+          from_name: `${data.name} (Singh Sisters Website)`,
           replyto: data.email,
           name: data.name,
           email: data.email,
@@ -111,7 +112,7 @@ export function BookingForm() {
         </div>
         <h3>Thanks for visiting!</h3>
         <p>
-          We have received your details, <strong>{data.name}</strong>. The Singh Sisters will get in touch with you soon at <strong>{data.email}</strong>.
+          We have received your details, <strong>{data.name}</strong>. Singh Sisters will get in touch with you soon at <strong>{data.email}</strong>.
         </p>
 
         {emailSent ? (

@@ -7,8 +7,8 @@ import { useState } from "react";
 
 const links = [
   ["/", "Home"],
-  ["/about", "Our Story"],
-  ["/services", "Our Services"],
+  ["/about", "Story Behind the Mission"],
+  ["/services", "Services"],
   ["/contact", "Contact"],
 ];
 
@@ -21,8 +21,10 @@ export function Header() {
       <div className="header-inner">
         <div className="site-brand-group">
           <Link href="/" className="brand-link">
-            <span className="brand-ss-logo" aria-hidden="true">SS</span>
-            <span className="brand-text">The Singh Sisters</span>
+            <span className="brand-logo-image-wrap" aria-hidden="true">
+              <img src="/images/SinghSisterlogo-transparent.png?v=20260822" alt="" className="brand-logo-image" />
+            </span>
+            <span className="brand-text">Singh Sisters</span>
           </Link>
         </div>
 

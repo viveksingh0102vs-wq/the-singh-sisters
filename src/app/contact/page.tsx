@@ -5,23 +5,23 @@ import { PageHero } from "@/components/ui";
 
 export const metadata: Metadata = {
   title: "Contact & Consultation",
-  description: "Contact The Singh Sisters and book your free study abroad consultation.",
+  description: "Contact Singh Sisters and book your free study abroad consultation.",
 };
 
 const gainItems = [
   "A clearer definition of your academic goals",
   "An independent expert mentor perspective",
-  "Tailored application & scholarship options",
+  "Master's, PhD & Postdoctoral guidance",
   "100% free initial consultation with zero hard sell",
 ];
 
 const socialLinks = [
   {
-    name: "Facebook",
-    subtitle: "Follow our updates",
-    href: "https://facebook.com/profile.php?id=100004193443887",
-    markClass: "facebook-mark",
-    markText: "f",
+    name: "Instagram",
+    subtitle: "Follow our journey",
+    href: "https://www.instagram.com/",
+    markClass: "instagram-mark",
+    markText: "◎",
   },
   {
     name: "X",
@@ -45,7 +45,7 @@ export default function Contact() {
       <PageHero
         eyebrow="Contact & Free Consultation"
         title="Your future starts with one conversation"
-        text="Spend 30 minutes with The Singh Sisters to clarify your goals, explore Master's, PhD & scholarship options, and plan your next steps."
+        text="Your first call is on us. It is an opportunity to discuss your aspirations, understand our process, and see how we can help you achieve your study abroad goals."
       />
 
       {/* Main Booking & Contact Form Section */}
@@ -86,7 +86,7 @@ export default function Contact() {
                 <h3>100% Free First Consultation</h3>
               </div>
               <p>
-                Your initial 30-minute consultation with The Singh Sisters is completely free. We will email you to confirm your chosen time slot.
+                Your initial 30-minute consultation with Singh Sisters is completely free. We will email you to confirm your chosen time slot.
               </p>
             </div>
           </aside>
@@ -109,9 +109,9 @@ export default function Contact() {
             <span className="social-badge-gold">
               <Heart size={14} className="heart-icon-gold" /> LET&apos;S STAY CONNECTED
             </span>
-            <h2>Feel free to connect with us on social media</h2>
+            <h2>Connect with us online</h2>
             <p>
-              Follow our journey, discover education insights, or reach out directly. We would love to hear from you.
+              Follow along or reach out directly through social media.
             </p>
           </div>
 
@@ -123,21 +123,14 @@ export default function Contact() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="social-card-item"
-                aria-label={`Visit The Singh Sisters on ${item.name}`}
+                aria-label={`Visit Singh Sisters on ${item.name}`}
               >
-                <div className="social-card-left">
-                  <span className={`social-avatar-mark ${item.markClass}`}>
-                    {item.markText}
-                  </span>
-                  <div className="social-card-text">
-                    <strong>{item.name}</strong>
-                    <small>{item.subtitle}</small>
-                  </div>
-                </div>
-                <ArrowUpRight size={20} className="social-arrow-icon" />
+                <span className={`social-avatar-mark ${item.markClass}`}>{item.markText}</span>
+                <span className="sr-only">{item.name}: {item.subtitle}</span>
               </a>
             ))}
           </div>
+          <div className="online-location-copy"><strong>Our location</strong><p>We work with students online, wherever they are. Reach out, and we&apos;ll find a time that works across time zones.</p></div>
         </div>
       </section>
     </>

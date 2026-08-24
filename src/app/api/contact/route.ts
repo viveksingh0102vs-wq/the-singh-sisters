@@ -35,7 +35,7 @@ export async function POST(request: Request) {
             access_key: web3Key,
             to_email: recipientEmail,
             subject: `New Study Abroad Inquiry from ${name}`,
-            from_name: `${name} (The Singh Sisters Website)`,
+            from_name: `${name} (Singh Sisters Website)`,
             replyto: email,
             name,
             email,

@@ -7,9 +7,9 @@ const opportunityCards = [
   {
     eyebrow: "Global destinations",
     title: "Countries we cover",
-    text: "Study opportunities across France, Germany, the United States, the United Kingdom, and wider Europe.",
-    tags: ["France", "Germany", "United States", "Europe"],
-    image: "/images/universities/oxford.jpg",
+    text: "Focused guidance for life sciences opportunities in four leading study destinations.",
+    tags: ["Germany", "France", "USA", "UK"],
+    image: "/images/CountryVisted.png?v=20260819b",
     imageAlt: "University of Oxford historic architecture representing global study destinations",
     href: "/contact",
     linkLabel: "Explore destinations",
@@ -17,8 +17,8 @@ const opportunityCards = [
   {
     eyebrow: "Academic pathways",
     title: "Services",
-    text: "Focused support for Master’s, PhD, Postdoctoral, STEM, and research-focused applications.",
-    tags: ["Master’s", "PhD", "Postdoctoral", "STEM"],
+    text: "Get a personalised shortlist of Master’s, PhD & Postdoc programs for life sciences matched to your budget, profile and research goals.",
+    tags: ["Master’s", "PhD", "Postdoctoral"],
     image: "/images/academic-pathways-hero.jpg",
     imageAlt: "International Master's and PhD graduates holding degree diplomas outside university",
     href: "/services",
@@ -26,10 +26,10 @@ const opportunityCards = [
   },
   {
     eyebrow: "One-to-one support",
-    title: "Personalized Mentorship",
+    title: "Personalised Mentorship",
     text: "A clear personal roadmap with profile review, university shortlisting, application feedback, and interview preparation.",
     tags: ["Profile review", "Applications", "Interviews"],
-    image: "/images/personalized-mentorship-hero.jpg",
+    image: "/images/personalized-mentorship-hero.png?v=20260819b",
     imageAlt: "Academic mentor providing one-on-one application guidance to a student",
     href: "/book-consultation",
     linkLabel: "Meet your mentor",
@@ -56,25 +56,17 @@ export default function Home() {
         <div className="intro-content">
           <Reveal>
             <div className="support-simple-modern">
-              <span className="section-kicker">Your future, in focus</span>
-              <h2>How we support your academic dreams</h2>
+              {/* <span className="section-kicker">A clear path forward</span> */}
+              <h2>Not Sure Where to Start?</h2>
               <p>
-                We empower ambitious students, researchers, women in STEM, and future innovators to access world-class Master&apos;s, PhD, and Postdoctoral opportunities across Europe and beyond.
+                Choosing the right university, country, course, or career path can feel overwhelming. We provide <strong>personalised guidance</strong> from PhD-trained mentors with international academic and research experience to help you understand your options, make informed decisions, and build a clear pathway toward your goals.
               </p>
               <p>
-                Whether you come from a metropolitan city, a small town, or a rural community, your dreams deserve global opportunities.
+                We support ambitious students in pursuing world-class Master&apos;s, PhD, and postdoctoral opportunities across Europe and beyond. Whether you come from a metropolitan city, a small town, or a rural community, your background should never limit your ambitions.
               </p>
-              <div className="support-list-panel">
-                <strong>Your global education journey starts here.</strong>
-                <ul>
-                  <li>Personalized Mentorship</li>
-                  <li>Scholarship Guidance</li>
-                  <li>European University Applications</li>
-                  <li>STEM &amp; Research Careers</li>
-                </ul>
-              </div>
+              <p className="support-belief">We believe everyone deserves access to the right guidance and the opportunity to build a future without borders.</p>
               <Link href="/services" className="education-button support-simple-cta">
-                Explore Our Services <ArrowRight size={17} aria-hidden="true" />
+                Explore Services <ArrowRight size={17} aria-hidden="true" />
               </Link>
             </div>
           </Reveal>
@@ -85,7 +77,7 @@ export default function Home() {
         <div className="impact-shell">
           <Reveal>
             <div className="impact-simple-heading">
-              <span className="section-kicker">A world of possibility</span>
+              {/* <span className="section-kicker">A world of possibility</span> */}
               <h2>Our Impact At A Glance</h2>
               <p>
                 We simplify the journey from aspiration to admission, making global education more accessible and achievable for ambitious students, researchers, and future innovators.
