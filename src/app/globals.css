@@ -2800,6 +2800,120 @@ html, body {
   background-size: cover !important;
 }
 
+/* Founder note: override the desktop fixed height on phones and use a portrait crop. */
+@media (max-width: 700px) {
+  .founder-note {
+    padding: 48px 0 64px;
+  }
+
+  .founder-grid {
+    gap: 30px;
+  }
+
+  .founder-grid .story-founder-photo {
+    min-height: 0 !important;
+    aspect-ratio: 4 / 5;
+    background-position: center 78% !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .founder-grid .story-founder-photo {
+    aspect-ratio: 3 / 4;
+  }
+}
+
+/* Final cross-device guardrails for phones and tablets. */
+@media (max-width: 768px) {
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .site-header-custom,
+  .header-inner,
+  .nav-shell {
+    max-width: 100%;
+  }
+
+  .brand-link {
+    min-width: 0;
+  }
+
+  .brand-text {
+    white-space: nowrap;
+  }
+
+  .story-mission-hero {
+    padding: 112px 18px 72px;
+  }
+
+  .story-mission-hero h1 {
+    font-size: clamp(2.45rem, 11vw, 4rem);
+    line-height: 1.02;
+  }
+
+  .story-mission-hero p {
+    font-size: .98rem;
+    line-height: 1.65;
+  }
+
+  .services-hero-v3 h1 {
+    font-size: clamp(2.4rem, 10.8vw, 4rem);
+  }
+
+  .services-section-head h2 {
+    font-size: clamp(2.25rem, 9vw, 3.5rem);
+  }
+
+  .services-section-head > p,
+  .services-pathway-subheading {
+    max-width: 100%;
+  }
+
+  .program-comparison-card,
+  .program-comparison-card:last-child {
+    min-height: 0;
+  }
+
+  .program-card-includes {
+    margin-top: 24px;
+  }
+
+  .booking-layout,
+  .contact-grid,
+  .contact-connect-grid {
+    width: 100%;
+  }
+
+  .booking-panel,
+  .contact-form-wrap {
+    min-width: 0;
+  }
+
+  .consultation-nudge {
+    max-width: calc(100% - 24px);
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1100px) {
+  .services-wrap,
+  .story-container,
+  .contact-container,
+  .booking-layout {
+    width: min(100% - 40px, 1000px);
+  }
+
+  .opportunity-grid-modern {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .program-comparison-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 /* Match the Story hero to the dark, grid-based Services hero language. */
 .story-mission-hero {
   position: relative;

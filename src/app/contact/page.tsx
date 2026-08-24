@@ -19,7 +19,7 @@ const socialLinks = [
   {
     name: "Instagram",
     subtitle: "Follow our journey",
-    href: "https://www.instagram.com/",
+    href: "https://www.instagram.com/_theanamika?igsi=MXVxZnI3OTBleHphMg==",
     markClass: "instagram-mark",
     markText: "◎",
   },
