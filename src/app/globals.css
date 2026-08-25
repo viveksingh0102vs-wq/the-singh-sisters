@@ -2131,7 +2131,7 @@ body{background:#f9fcfd}.education-hero{min-height:660px}.education-hero:after{p
   letter-spacing: -.045em;
   line-height: 1;
 }
-.why-exist-professional{padding:48px 0 64px;background:#f4faf9}.why-exist-professional .detail-grid{grid-template-columns:1fr 1fr;align-items:center}.story-indian-students-photo{min-height:0;aspect-ratio:4 / 3;background-image:url('/images/why-we-exist-mentorship.png?v=20260821');background-position:center;background-size:cover;border-radius:24px}.story-founder-photo{min-height:540px!important;background-image:url('/images/home-eiffel-hero.jpeg?v=20260819b')!important;background-position:center!important;border-radius:24px}.founder-note{background:#fff9ef}
+.why-exist-professional{padding:48px 0 64px;background:#f4faf9}.why-exist-professional .detail-grid{grid-template-columns:1fr 1fr;align-items:center}.story-indian-students-photo{min-height:0;aspect-ratio:1 / 1;background-image:url('/images/why-we-exist-students.jpg?v=20260825');background-position:center;background-size:cover;border-radius:24px}.story-founder-photo{min-height:540px!important;background-image:url('/images/home-eiffel-hero.jpeg?v=20260819b')!important;background-position:center!important;border-radius:24px}.founder-note{background:#fff9ef}
 .women-stem-photo{background-image:linear-gradient(90deg,rgba(3,40,48,.94) 0%,rgba(4,63,73,.78) 48%,rgba(5,63,73,.3)),url('/images/women-empowered.jpg')!important;background-size:cover!important;background-position:center 48%!important}.stem-banner-v3:before{background:none!important}.stem-content-v3>div{max-width:760px}
 .stem-content-v3 .stem-main-heading {
   margin: 0 0 18px;
@@ -2998,4 +2998,12 @@ html, body {
 
 .story-mission-hero p {
   color: #c3dce1;
+}
+
+/* Make the supporting labels on the story page readable on light backgrounds. */
+.sisters-section > .section-kicker,
+.founder-note .section-kicker {
+  color: #063f46 !important;
+  font-weight: 800;
+  opacity: 1;
 }

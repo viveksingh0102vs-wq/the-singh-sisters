@@ -12,7 +12,7 @@ export async function POST(request: Request) {
       );
     }
 
-    const recipientEmail = "viveksingh0102vs@gmail.com";
+    const recipientEmail = "singhsisters2112@gmail.com";
 
     console.log("=================================================");
     console.log("📩 NEW CONSULTATION FORM SUBMITTED");

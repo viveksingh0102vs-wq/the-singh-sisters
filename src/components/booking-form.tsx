@@ -24,7 +24,9 @@ const topicOptions = [
   "General Study Abroad Consultation",
 ];
 
-const WEB3FORMS_KEY = "a2bd156a-1413-4714-9627-0f73fed39acb";
+// Read the active form key from .env.local so changing the Web3Forms account
+// does not leave the browser submitting through an outdated hard-coded key.
+const WEB3FORMS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_KEY || "";
 
 interface SubmitResponse {
   data: Data;
@@ -92,7 +94,7 @@ export function BookingForm() {
     const mailtoBody = encodeURIComponent(
       `Name: ${data.name}\nEmail: ${data.email}\nTopic: ${data.topic}\nNotes: ${data.notes || "None"}`
     );
-    const mailtoUrl = `mailto:viveksingh0102vs@gmail.com?subject=${mailtoSubject}&body=${mailtoBody}`;
+    const mailtoUrl = `mailto:singhsisters2112@gmail.com?subject=${mailtoSubject}&body=${mailtoBody}`;
 
     setSubmittedResult({
       data,
@@ -117,12 +119,12 @@ export function BookingForm() {
 
         {emailSent ? (
           <p style={{ color: "#0b3933", fontWeight: 600, fontSize: "0.92rem", marginTop: 12 }}>
-            ✓ An email notification has been dispatched to <strong>viveksingh0102vs@gmail.com</strong>!
+            ✓ An email notification has been dispatched to <strong>singhsisters2112@gmail.com</strong>!
           </p>
         ) : mailtoUrl ? (
           <div className="owner-email-trigger-box">
             <p className="owner-notify-text">
-              Click below to send an instant email notification directly to <strong>viveksingh0102vs@gmail.com</strong>:
+              Click below to send an instant email notification directly to <strong>singhsisters2112@gmail.com</strong>:
             </p>
             <a
               href={mailtoUrl}
@@ -130,7 +132,7 @@ export function BookingForm() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Mail size={18} /> Send Email to viveksingh0102vs@gmail.com
+              <Mail size={18} /> Send Email to singhsisters2112@gmail.com
             </a>
           </div>
         ) : null}

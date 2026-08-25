@@ -12,7 +12,7 @@ Built with **Next.js 16 (App Router)**, **TypeScript**, **Vanilla CSS design sys
 - **SS Monogram Branding & Custom Palette**: Deep forest green (`#0B3933`), warm gold (`#B58A4E`), off-white header navigation (`#FAF8F5`), and high-contrast typography.
 - **Free Consultation & Contact Hub**:
   - Integrated 4-field consultation booking form (*Name, Email, Consultation Topic, Notes*).
-  - Web3Forms API email forwarding sending lead notifications directly to **`viveksingh0102vs@gmail.com`**.
+  - Web3Forms API email forwarding sending lead notifications directly to **`singhsisters2112@gmail.com`**.
   - Direct 1-click fallback email trigger for instant user-to-owner contact.
 - **Social Media Connect Grid**: Interactive cards for Facebook, X (Twitter), and LinkedIn matching custom design specifications.
 - **Topic-Justifying Media**: Custom artwork for Global Destinations, Academic Pathways, Personalized Mentorship, and Scholarship Guidance.

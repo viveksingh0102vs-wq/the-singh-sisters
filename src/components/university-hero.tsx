@@ -108,11 +108,11 @@ export function UniversityHero() {
           <p className="hero-principle">Talent is Universal. Opportunity Should Be Too.</p>
 
           <h1 className="hero-best-fit-title">
-            Find the Best-Fit Master&apos;s, PhD &amp; Postdoctoral Opportunities Abroad for Life Sciences
+            Find the Best-Fit Master&apos;s, PhD &amp; Postdoctoral Opportunities Abroad 
           </h1>
 
           <p className="hero-subtext-contrast">
-            Whether you&apos;re a student from a small town stepping into life sciences or an aspiring researcher aiming beyond borders, we&apos;re here to guide your journey every step of the way. Your future begins with one conversation. Get a personalised Master&apos;s, PhD &amp; Postdoc shortlist tailored to your budget, profile and research goals — so every application counts.
+            Find the right Master's, PhD, or Postdoctoral opportunity with guidance tailored to your ambitions, budget and profile.
           </p>
 
           <div className="hero-actions-contrast">
