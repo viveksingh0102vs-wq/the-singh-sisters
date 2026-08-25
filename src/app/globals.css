@@ -2131,7 +2131,7 @@ body{background:#f9fcfd}.education-hero{min-height:660px}.education-hero:after{p
   letter-spacing: -.045em;
   line-height: 1;
 }
-.why-exist-professional{padding:95px 0;background:#f4faf9}.why-exist-professional .detail-grid{grid-template-columns:1fr 1fr;align-items:center}.story-indian-students-photo{min-height:560px;background-image:url('/images/why-we-exist-mentorship.png?v=20260821');background-position:center;background-size:cover;border-radius:24px}.story-founder-photo{min-height:540px!important;background-image:url('/images/home-eiffel-hero.jpeg?v=20260819b')!important;background-position:center!important;border-radius:24px}.founder-note{background:#fff9ef}
+.why-exist-professional{padding:48px 0 80px;background:#f4faf9}.why-exist-professional .detail-grid{grid-template-columns:1fr 1fr;align-items:center}.story-indian-students-photo{min-height:560px;background-image:url('/images/why-we-exist-mentorship.png?v=20260821');background-position:center;background-size:cover;border-radius:24px}.story-founder-photo{min-height:540px!important;background-image:url('/images/home-eiffel-hero.jpeg?v=20260819b')!important;background-position:center!important;border-radius:24px}.founder-note{background:#fff9ef}
 .women-stem-photo{background-image:linear-gradient(90deg,rgba(3,40,48,.94) 0%,rgba(4,63,73,.78) 48%,rgba(5,63,73,.3)),url('/images/women-empowered.jpg')!important;background-size:cover!important;background-position:center 48%!important}.stem-banner-v3:before{background:none!important}.stem-content-v3>div{max-width:760px}
 .stem-content-v3 .stem-main-heading {
   margin: 0 0 18px;
@@ -2160,6 +2160,23 @@ body{background:#f9fcfd}.education-hero{min-height:660px}.education-hero:after{p
 
 @media(max-width:760px){.consultation-nudge{right:12px;bottom:10px;width:calc(100% - 24px);grid-template-columns:auto 1fr}.consultation-nudge-icon{display:none}.consultation-nudge a{grid-column:2;padding:8px 10px;width:max-content}.footer-consultation{align-items:flex-start;flex-direction:column}.why-exist-professional .detail-grid{grid-template-columns:1fr}.story-mission-hero{padding:105px 18px 70px}.story-indian-students-photo{min-height:360px}.brand-text{font-size:1.15rem!important}.desktop-nav-custom .nav-item{font-size:.74rem}.footer-consultation>a{width:100%;text-align:center}}
 
+/* Give the story content a fuller, less fragmented rhythm on tablets and phones. */
+@media (max-width: 900px) {
+  .story-intro { padding: 48px 0 24px; }
+  .story-top-grid,
+  .founder-grid,
+  .detail-grid,
+  .why-exist-professional .detail-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .story-founders-photo,
+  .story-indian-students-photo {
+    min-height: 340px;
+  }
+  .why-exist-professional { padding: 34px 0 58px; }
+}
+
 .social-cards-grid { display:flex; gap:12px; }
 .social-card-item { display:grid; width:52px; height:52px; padding:0; place-items:center; border-radius:14px; }
 .social-card-item .social-avatar-mark { width:38px; height:38px; border-radius:10px; font-size:.95rem; }
@@ -2181,6 +2198,36 @@ body{background:#f9fcfd}.education-hero{min-height:660px}.education-hero:after{p
   line-height: 1 !important;
   text-align: center !important;
   transform: none !important;
+}
+
+/* Keep the footer brand and its global-education tagline on one optical baseline. */
+.site-footer .footer-content > div:first-child {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  min-width: 0;
+}
+.site-footer .footer-content > div:first-child p,
+.site-footer .footer-content > div:first-child span {
+  margin: 0;
+  line-height: 1.25;
+}
+.site-footer .footer-content > div:first-child p {
+  flex: 0 0 auto;
+}
+.site-footer .footer-content > div:first-child span {
+  display: block;
+  white-space: nowrap;
+}
+@media (max-width: 760px) {
+  .site-footer .footer-content > div:first-child {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .site-footer .footer-content > div:first-child span {
+    white-space: normal;
+  }
 }
 .instagram-mark { font-size: 1.15rem !important; padding-bottom: 1px !important; }
 .x-mark { font-size: .9rem !important; }
