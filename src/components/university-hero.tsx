@@ -112,7 +112,7 @@ export function UniversityHero() {
           </h1>
 
           <p className="hero-subtext-contrast">
-            Find the right Master's, PhD, or Postdoctoral opportunity with guidance tailored to your ambitions, budget and profile.
+            Explore the right Master's, PhD, or Postdoctoral opportunity with guidance tailored to your ambitions, budget and profile.
           </p>
 
           <div className="hero-actions-contrast">
